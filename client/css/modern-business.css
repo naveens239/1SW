@@ -1,0 +1,123 @@
+/*!
+ * Start Bootstrap - Modern Business HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Global Styles */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.img-portfolio {
+    margin-bottom: 30px;
+}
+
+.img-hover:hover {
+    opacity: 0.8;
+}
+
+/* Home Page Carousel */
+
+header.carousel {
+    height: 50%;
+}
+
+header.carousel .item,
+header.carousel .item.active,
+header.carousel .carousel-inner {
+    height: 100%;
+}
+
+header.carousel .fill {
+    width: 80%;
+    height: 80%;
+    background-position: center;
+    background-size: cover;
+}
+
+/* 404 Page Styles */
+
+.error-404 {
+    font-size: 100px;
+}
+
+/* Pricing Page Styles */
+
+.price {
+    display: block;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.price sup {
+    top: -20px;
+    left: 2px;
+    font-size: 20px;
+}
+
+.period {
+    display: block;
+    font-style: italic;
+}
+/* buttons */
+.tfbutton {
+		float:right;
+		padding: 5px 15px;
+		font-family: 'Caudex- Regular';
+		text-transform: uppercase;
+		font-weight: normal;
+		font-size:14px;
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		color: #836544;
+		border: solid 1px #ccaf61;
+		background: #EEE6CF;
+		background: -webkit-gradient(linear, left top, left bottom, from(#EEE6CF), to(#ccc099));
+		
+		border-top-right-radius: 5px 5px;
+		border-bottom-right-radius: 5px 5px;
+		border-top-left-radius: 5px 5px;
+		border-bottom-left-radius: 5px 5px;
+	}
+	.tfbutton:hover {
+		text-decoration: none;
+		background:#D8C795;	
+	}
+	
+	/* Fixes submit button height problem in Firefox */
+	.tfbutton::-moz-focus-inner {
+	  border: 0;
+	}
+/* Footer Styles */
+
+footer {
+    margin: 50px 0;
+}
+
+/* Responsive Styles */
+
+@media(max-width:991px) {
+    .customer-img,
+    .img-related {
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:767px) {
+    .img-portfolio {
+        margin-bottom: 15px;
+    }
+
+    header.carousel .carousel {
+        height: 70%;
+    }
+}

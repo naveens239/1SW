@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+    <base href="/client">
+    <meta charset="UTF-8"/>
+    <title>1 Stop Wed</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/popup.css" type="text/css"/>
+
+</head>
+<body>
+
+{{>vendor_header.html}}
+
+<div id="contents">
+    <div id="main">
+        <table class="chartboxed">
+            <tr>
+                <th>My Notifications
+                </th>
+
+            </tr>
+            <tr>
+                <td>
+                    <div id="wrapper">
+                        <div id="left_div">
+                            <a href="#" id="link1">User msg 1</a></br>
+                            <a href="#" id="link2">User msg 2</a></br>
+                            <a href="#" id="link3">User msg 3</a></br>
+                            <a href="#" id="link4">User msg 4</a></br>
+
+
+                        </div>
+                        <form>
+                            <div id="right_div">
+                                <div class="container">
+                                </div>
+                            </div>
+                            <button id="reply" class="replyButton">Reply</button>
+                            <form>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <table class="chartboxed">
+
+            <tr>
+                <th>Catering
+                </th>
+            </tr>
+            <tr>
+                <td id="catering_chart_div"></td>
+            </tr>
+            <tr>
+                <th>Photography</th>
+            </tr>
+            <tr>
+                <td id="photo_chart_div"></td>
+            </tr>
+
+        </table>
+
+
+        <span class="footer"></span>
+    </div>
+</div>
+
+</div>
+
+{{>footer.html}}
+
+<script type="text/javascript" src="js/libs/jquery.min.js"></script>
+<script type="text/javascript" src="js/libs/jquery.leanModal.min.js"></script>
+<script type="text/javascript" src="js/libs/google_chartapi.js"></script>
+<script type="text/javascript" src="pages/vendor_home/chart.js"></script>
+<script type="text/javascript" src="pages/vendor_home/toggle.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Profile - 1 Stop Wed</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-social.css"/>
+    <link rel="stylesheet" href="css/bootstrap-multiselect.css"/>
+    <link rel="stylesheet" href="css/modern-business.css"/>
+    <link rel="stylesheet" href="css/1stopwed.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/libs/html5shiv.js"></script>
+    <script src="js/libs/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+{{>vendor_header.html}}
+
+<!-- Page Content -->
+<div class="container">
+<!-- Service Tabs -->
+<div class="row">
+<div class="col-lg-12">
+    <h2 class="page-header">Service Tabs</h2>
+</div>
+<div class="col-lg-12">
+
+<ul id="myTab" class="nav nav-tabs nav-justified">
+    <li class="active"><a href="#service-one" data-toggle="tab">Official Info</a>
+    </li>
+    <li class=""><a href="#service-two" data-toggle="tab">Services Provided</a>
+    </li>
+    <li class=""><a href="#service-three" data-toggle="tab"> Gallery</a>
+    </li>
+    <li class=""><a href="#service-four" data-toggle="tab">Bank Info</a>
+    </li>
+</ul>
+
+<div id="myTabContent" class="tab-content">
+<div class="tab-pane fade active in" id="service-one">
+
+<form id="vendor_form" class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Official Info</legend>
+
+<!-- Text input-->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="vendor_name">Vendor Name</label>
+
+    <div class="col-md-4">
+        <input id="vendor_name" name="vendor_name" placeholder="Your Company name"
+               class="form-control input-md" required="" type="text">
+
+    </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="email">Email</label>
+
+    <div class="col-md-4">
+        <div class="input-group">
+            <input id="email" name="email" placeholder="Your email address" class="form-control input-md"
+                   required="" type="text">
+            <span class="input-group-addon  glyphicon glyphicon-envelope"></span>
+        </div>
+    </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="website">Website</label>
+
+    <div class="col-md-4">
+        <input id="website" name="website" placeholder="Your website address" class="form-control input-md"
+               type="text">
+
+    </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="fbpage">Facebook Page</label>
+
+    <div class="col-md-4">
+        <div class="input-group">
+            <input id="fbpage" name="fbpage" placeholder="Your fb page" class="form-control input-md"
+                   type="text">
+            <span class="input-group-addon  btn-facebook"><i class="fa fa-facebook"></i></span>
+        </div>
+
+    </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="youtube">Youtube Link</label>
+
+    <div class="col-md-4">
+        <div class="input-group">
+            <input id="youtube" name="youtube" placeholder="Your youtube link" class="form-control input-md"
+                   type="text">
+            <span class="input-group-addon icon-youtube"><i class="fa fa-youtube"></i></span>
+        </div>
+    </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="twitter">Twitter</label>
+
+    <div class="col-md-4">
+        <div class="input-group">
+            <input id="twitter" name="twitter" placeholder="Your twitter page" class="form-control input-md"
+                   type="text">
+            <span class="input-group-addon  btn-twitter"><i class="fa fa-twitter"></i></span>
+        </div>
+    </div>
+</div>
+
+<!-- Prepended text-->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="mobile">Primary Mobile Phone</label>
+
+    <div class="col-md-4">
+        <div class="input-group">
+            <span class="input-group-addon">+91</span>
+            <input id="mobile" name="mobile" class="form-control" placeholder="Your mobile number"
+                   required="" type="text">
+            <span class="input-group-addon  glyphicon glyphicon-phone"></span>
+        </div>
+
+    </div>
+</div>
+
+<!-- Prepended text-->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="altphone">Alternate Phone</label>
+
+    <div class="col-md-4">
+        <div class="input-group">
+            <span class="input-group-addon">+91</span>
+            <input id="altphone" name="altphone" class="form-control" placeholder="Secondary phone"
+                   type="text">
+        </div>
+
+    </div>
+</div>
+
+<!-- Prepended text-->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="landphone">Landline</label>
+
+    <div class="col-md-4">
+        <div class="input-group">
+            <span class="input-group-addon">+91</span>
+            <input id="landphone" name="landphone" class="form-control" placeholder="Phone with area code"
+                   type="text">
+            <span class="input-group-addon  glyphicon glyphicon-phone-alt"></span>
+        </div>
+
+    </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="addressline1">Address Line 1</label>
+
+    <div class="col-md-4">
+        <input id="addressline1" name="addressline1" placeholder="" class="form-control input-md"
+               required="" type="text">
+
+    </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="addressline2">Address Line 2</label>
+
+    <div class="col-md-4">
+        <input id="addressline2" name="addressline2" placeholder="" class="form-control input-md"
+               type="text">
+
+    </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="state">State/Territory</label>
+
+    <div class="col-md-4">
+        <select id="state" name="state" class="form-control">
+            {{>indian_states.html}}
+        </select>
+    </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="city">City</label>
+
+    <div class="col-md-4">
+        <input id="city" name="city" placeholder="" class="form-control input-md" required="" type="text">
+
+    </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="pincode">Pincode</label>
+
+    <div class="col-md-4">
+        <input id="pincode" name="pincode" placeholder="" class="form-control input-md" required=""
+               type="text">
+
+    </div>
+</div>
+
+<!-- Multiple Checkboxes -->
+<div class="form-group">
+    <label class="col-md-4 control-label">Best way to contact</label>
+
+    <div class="col-md-4">
+        <div class="checkbox">
+            <label for="best_way_to_contact-0">
+                <input name="best_way_to_contact" id="best_way_to_contact-0" value="Email" type="checkbox">
+                Email
+            </label>
+        </div>
+        <div class="checkbox">
+            <label for="best_way_to_contact-1">
+                <input name="best_way_to_contact" id="best_way_to_contact-1" value="SMS" type="checkbox">
+                SMS
+            </label>
+        </div>
+        <div class="checkbox">
+            <label for="best_way_to_contact-2">
+                <input name="best_way_to_contact" id="best_way_to_contact-2" value="Mobile" type="checkbox">
+                Mobile
+            </label>
+        </div>
+        <div class="checkbox">
+            <label for="best_way_to_contact-3">
+                <input name="best_way_to_contact" id="best_way_to_contact-3" value="WhatsApp"
+                       type="checkbox">
+                WhatsApp
+            </label>
+        </div>
+    </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="btn_proceed_from_profile_entry"></label>
+
+    <div class="col-md-4">
+        <button id="btn_proceed_from_profile_entry" name="btn_proceed_from_profile_entry"
+                class="btn btn-success">Next
+        </button>
+    </div>
+</div>
+
+</fieldset>
+</form>
+
+</div>
+<div class="tab-pane fade" id="service-two">
+<form id="services_form" class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Services Provided</legend>
+
+<!-- Select Multiple -->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="select_services">Services you provide</label>
+
+    <div class="col-md-4">
+        <select id="select_services" name="select_services" class="form-control" multiple="multiple">
+            {{#each vendor_services}}
+            <option value="{{value}}">{{name}}</option>
+            {{/each}}
+        </select>
+    </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="other_services">Other Services</label>
+
+    <div class="col-md-4">
+        <input id="other_services" name="other_services" placeholder="Service Name" class="form-control input-md"
+               type="text">
+        <span class="help-block">Enter services not listed separated by comma. Eg: service1, service2</span>
+    </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="other_services_location">Service Location</label>
+
+    <div class="col-md-4">
+        <input id="other_services_location" name="other_services_location" placeholder="Your location"
+               class="form-control input-md" type="text">
+        <span class="help-block">Enter multiple locations separated by comma. Eg: Loc1, Loc2</span>
+    </div>
+</div>
+
+<!-- Form Name -->
+<legend id="catering_head" style="display: none">Catering</legend>
+<div id="catering" style="display: none">
+    <!-- Select Multiple -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="select_catering">Menu Offered</label>
+
+        <div class="col-md-4">
+            <select id="select_catering" name="select_catering" class="form-control" multiple="multiple">
+                <option value="veg">Vegetarian</option>
+                <option value="non_veg">Non-Vegetarian</option>
+                <option value="veg_non_veg">Veg and Non-Veg</option>
+                <option value="sadhya">Sadhya</option>
+                <option value="live_food">Live Food Counter</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="other_menu">Other Menus Offered</label>
+
+        <div class="col-md-4">
+            <input id="other_menu" name="other_menu" placeholder="Other Menus" class="form-control input-md"
+                   type="text">
+
+        </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="menu_pricing">Pricing per plate less than</label>
+
+        <div class="col-md-4">
+            <input id="menu_pricing" name="menu_pricing" placeholder="" class="form-control input-md" type="text">
+
+        </div>
+    </div>
+
+    <!-- Select Multiple -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="select_catering_loc">Location</label>
+
+        <div class="col-md-4">
+            <select id="select_catering_loc" name="select_catering_loc" class="form-control" multiple="multiple">
+                {{>indian_states.html}}
+            </select>
+        </div>
+    </div>
+
+    <!-- Textarea -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="menu_notes">Notes</label>
+
+        <div class="col-md-4">
+            <textarea class="form-control" id="menu_notes" name="menu_notes"></textarea>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Form Name -->
+<legend id="photography_head" style="display: none">Photography</legend>
+<div id="photography" style="display: none">
+    <!-- Select Multiple -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="select_photography_loc">Packages Offered</label>
+
+        <div class="col-md-4">
+            <select id="select_photography_loc" name="select_photography_loc" class="form-control" multiple="multiple">
+                <option value='candid'>Candid</option>
+                <option value='contemporary'>Contemporary Style</option>
+                <option value='level_1'>Base Package</option>
+                <option value='level_2'>Level 2</option>
+                <option value='level_3'>Level 3</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="other_photo_pack">Other Packages Offered</label>
+
+        <div class="col-md-4">
+            <input id="other_photo_pack" name="other_photo_pack" placeholder="Other Packages"
+                   class="form-control input-md"
+                   type="text">
+
+        </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="photo_pricing">Starting Package Pricing</label>
+
+        <div class="col-md-4">
+            <input id="photo_pricing" name="photo_pricing" placeholder="" class="form-control input-md" type="text">
+
+        </div>
+    </div>
+
+    <!-- Select Multiple -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="photo_loc">Location</label>
+
+        <div class="col-md-4">
+            <select id="photo_loc" name="photo_loc" class="form-control" multiple="multiple">
+                {{>indian_states.html}}
+            </select>
+        </div>
+    </div>
+
+    <!-- Textarea -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="photo_notes">Notes</label>
+
+        <div class="col-md-4">
+            <textarea class="form-control" id="photo_notes" name="photo_notes"></textarea>
+        </div>
+    </div>
+
+</div>
+
+<!-- Form Name -->
+<legend id="videography_head" style="display: none">Videography</legend>
+<div id="videography" style="display: none">
+    <!-- Select Multiple -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="select_videography_loc">Packages Offered</label>
+
+        <div class="col-md-4">
+            <select id="select_videography_loc" name="select_videography_loc" class="form-control" multiple="multiple">
+                <option value='highlights'>Highlights</option>
+                <option value='contemporary'>Contemporary Style</option>
+                <option value='level_1'>Base Package</option>
+                <option value='level_2'>Level 2</option>
+                <option value='level_3'>Level 3</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="other_video_pack">Other Packages Offered</label>
+
+        <div class="col-md-4">
+            <input id="other_video_pack" name="other_video_pack" placeholder="Other Packages"
+                   class="form-control input-md"
+                   type="text">
+
+        </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="video_pricing">Starting Package Pricing</label>
+
+        <div class="col-md-4">
+            <input id="video_pricing" name="video_pricing" placeholder="" class="form-control input-md" type="text">
+
+        </div>
+    </div>
+
+    <!-- Select Multiple -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="video_loc">Location</label>
+
+        <div class="col-md-4">
+            <select id="video_loc" name="video_loc" class="form-control" multiple="multiple">
+                {{>indian_states.html}}
+            </select>
+        </div>
+    </div>
+
+    <!-- Textarea -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="video_notes">Notes</label>
+
+        <div class="col-md-4">
+            <textarea class="form-control" id="video_notes" name="video_notes"></textarea>
+        </div>
+    </div>
+
+</div>
+
+<!-- Form Name -->
+<legend id="streaming_head" style="display: none"> Live Web Streaming</legend>
+<div id="streaming" style="display: none">
+    <!-- Select Multiple -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="select_stream_packages">Packages Offered</label>
+
+        <div class="col-md-4">
+            <select id="select_stream_packages" name="select_stream_packages" class="form-control" multiple="multiple">
+                <option value='level_1'>Base Package</option>
+                <option value='level_2'>Level 2</option>
+                <option value='level_3'>Level 3</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="other_stream_pack">Other Packages Offered</label>
+
+        <div class="col-md-4">
+            <input id="other_stream_pack" name="other_stream_pack" placeholder="Other Packages"
+                   class="form-control input-md" type="text">
+
+        </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="stream_pricing">Starting Package Pricing</label>
+
+        <div class="col-md-4">
+            <input id="stream_pricing" name="stream_pricing" placeholder="" class="form-control input-md" type="text">
+
+        </div>
+    </div>
+
+    <!-- Select Multiple -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="select_stream_loc">Location</label>
+
+        <div class="col-md-4">
+            <select id="select_stream_loc" name="select_stream_loc" class="form-control" multiple="multiple">
+                {{>indian_states.html}}
+            </select>
+        </div>
+    </div>
+
+    <!-- Textarea -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="stream_notes">Notes</label>
+
+        <div class="col-md-4">
+            <textarea class="form-control" id="stream_notes" name="stream_notes"></textarea>
+        </div>
+    </div>
+</div>
+
+<!-- Form Name -->
+<legend id="bridal_makeup_head" style="display: none">Bridal Makeup</legend>
+<div id="bridal_makeup" style="display: none">
+    <!-- Select Multiple -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="select_bridal_makeup_loc">Packages Offered</label>
+
+        <div class="col-md-4">
+            <select id="select_bridal_makeup_loc" name="select_bridal_makeup_loc" class="form-control"
+                    multiple="multiple">
+                <option value='level_1'>Base Package</option>
+                <option value='level_2'>Level 2</option>
+                <option value='level_3'>Level 3</option>
+                <option value='all_brides'>All Brides/Grooms</option>
+                <option value='bouquets'>Bouquets</option>
+                <option value='bridesmaids'>Bridesmaid Makeup</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="other_makeup_pack">Other Packages Offered</label>
+
+        <div class="col-md-4">
+            <input id="other_makeup_pack" name="other_makeup_pack" placeholder="Other Packages"
+                   class="form-control input-md" type="text">
+
+        </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="makeup_pricing">Starting Package Pricing</label>
+
+        <div class="col-md-4">
+            <input id="makeup_pricing" name="makeup_pricing" placeholder="" class="form-control input-md" type="text">
+
+        </div>
+    </div>
+
+    <!-- Select Multiple -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="makeup_loc">Location</label>
+
+        <div class="col-md-4">
+            <select id="makeup_loc" name="makeup_loc" class="form-control" multiple="multiple">
+                {{>indian_states.html}}
+            </select>
+        </div>
+    </div>
+
+    <!-- Textarea -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="bridal_notes">Notes</label>
+
+        <div class="col-md-4">
+            <textarea class="form-control" id="bridal_notes" name="bridal_notes"></textarea>
+        </div>
+    </div>
+</div>
+
+<!-- Form Name -->
+<legend id="jewellery_head" style="display: none">Jewellery</legend>
+<div id="jewellery" style="display: none">
+    <!-- Textarea -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="jewellery_notes">Notes</label>
+
+        <div class="col-md-4">
+            <textarea class="form-control" id="jewellery_notes" name="jewellery_notes"
+                      placeholder="Do you provide jewellery booking a year in advance? Do you provide jewellery exchange option? Please mention such services offered"></textarea>
+        </div>
+    </div>
+</div>
+
+<!-- Form Name -->
+<legend id="bridal_wear_head" style="display: none"> Bridal wear</legend>
+<div id="bridal_wear" style="display: none">
+    <!-- Textarea -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="bridalwear_notes">Notes</label>
+
+        <div class="col-md-4">
+            <textarea class="form-control" id="bridalwear_notes" name="bridalwear_notes"
+                      placeholder="Do you provide custom-made designs for Groom, Bride, Bridesmaids and Groomsmen? Do you provide exchange/refund option within 15days? Please mention such services offered"></textarea>
+        </div>
+    </div>
+</div>
+
+<!-- Form Name -->
+<legend id="designer_wear_head" style="display: none">Designer Wear</legend>
+<div id="designer_wear" style="display: none">
+    <!-- Textarea -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="designer_notes">Notes</label>
+
+        <div class="col-md-4">
+            <textarea class="form-control" id="designer_notes" name="designer_notes"
+                      placeholder="Do you provide custom-made designs? Do you make custom wear for Bridesmaids/Groomsmen? Please mention such services offered"></textarea>
+        </div>
+    </div>
+</div>
+
+<!-- Form Name -->
+<legend id="cosmetics_head" style="display: none">Cosmetics</legend>
+<div id="cosmetics" style="display: none">
+    <!-- Textarea -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="cosmetics_notes">Notes</label>
+
+        <div class="col-md-4">
+            <textarea class="form-control" id="cosmetics_notes" name="cosmetics_notes"
+                      placeholder="Anything different you would like to describe about your service offered"></textarea>
+        </div>
+    </div>
+</div>
+
+<!-- Form Name -->
+<legend id="cards_head" style="display: none">Invitation Cards</legend>
+<div id="cards" style="display: none">
+    <!-- Textarea -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="cards_notes">Notes</label>
+
+        <div class="col-md-4">
+            <textarea class="form-control" id="cards_notes" name="cards_notes"
+                      placeholder="Do you make custom style cards? What is the pricing range you offer? Anything more you would like to add about your service"></textarea>
+        </div>
+    </div>
+</div>
+
+<!-- Form Name -->
+<legend id="travel_head" style="display: none">Travel and Honeymoon</legend>
+<div id="travel" style="display: none">
+    <!-- Textarea -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="travel_notes">Notes</label>
+
+        <div class="col-md-4">
+            <textarea class="form-control" id="travel_notes" name="travel_notes"
+                      placeholder="Where are your prime destinations? What is the minimum pricing package you offer? Anything more you would like to add about your service"></textarea>
+        </div>
+    </div>
+</div>
+
+<!-- Form Name -->
+<legend id="accessories_head" style="display: none">Wedding Accessories</legend>
+<div id="accessories" style="display: none">
+    <!-- Textarea -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="accessories_notes">Notes</label>
+
+        <div class="col-md-4">
+            <textarea class="form-control" id="accessories_notes" name="accessories_notes"
+                      placeholder="Do you make custom wedding accessories for Bride? Do you make custom accessories for Bridesmaids/Groomsmen? Anything more you would like to add about your service"></textarea>
+        </div>
+    </div>
+</div>
+
+<!-- Form Name -->
+<legend id="venue_head" style="display: none">Wedding Halls/Venus</legend>
+<div id="venue" style="display: none">
+    <!-- Textarea -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="venue_notes">Notes</label>
+
+        <div class="col-md-4">
+            <textarea class="form-control" id="venue_notes" name="venue_notes"
+                      placeholder="Booking must be provided how many days in advance? What is the range in which you offer your service? Anything more you would like to add"></textarea>
+        </div>
+    </div>
+</div>
+
+<!-- Form Name -->
+<legend id="event_management_head" style="display: none">Event Management</legend>
+<div id="event_management" style="display: none">
+    <!-- Textarea -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="event_notes">Notes</label>
+
+        <div class="col-md-4">
+            <textarea class="form-control" id="event_notes" name="event_notes"
+                      placeholder="Which locations all do you provide your service. Anything more you would like to add"></textarea>
+        </div>
+    </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="btn_proceed_from_service_prov"></label>
+
+    <div class="col-md-4">
+        <button id="btn_proceed_from_service_prov" name="btn_proceed_from_service_prov"
+                class="btn btn-success">Next
+        </button>
+    </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+<div class="tab-pane fade" id="service-three">
+    <h4> Gallery</h4>
+    <!-- Button -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="btn_proceed_from_gallery"></label>
+
+        <div class="col-md-4">
+            <button id="btn_proceed_from_gallery" name="btn_proceed_from_gallery"
+                    class="btn btn-success">Next
+            </button>
+        </div>
+    </div>
+</div>
+<div class="tab-pane fade" id="service-four">
+    <form id="bank_form" class="form-horizontal">
+        <fieldset>
+
+            <!-- Form Name -->
+            <legend>Bank Info</legend>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="account_name">Account Name</label>
+
+                <div class="col-md-4">
+                    <input id="account_name" name="account_name" placeholder="" class="form-control input-md"
+                           type="text">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="bank_name">Bank Name</label>
+
+                <div class="col-md-4">
+                    <input id="bank_name" name="bank_name" placeholder="" class="form-control input-md" type="text">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="branch">Branch</label>
+
+                <div class="col-md-4">
+                    <input id="branch" name="branch" placeholder="" class="form-control input-md" type="text">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="branch_district">Branch District</label>
+
+                <div class="col-md-4">
+                    <input id="branch_district" name="branch_district" placeholder="" class="form-control input-md"
+                           type="text">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="branch_place">Branch Place</label>
+
+                <div class="col-md-4">
+                    <input id="branch_place" name="branch_place" placeholder="" class="form-control input-md"
+                           type="text">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="branch_pincode">Branch Pincode</label>
+
+                <div class="col-md-4">
+                    <input id="branch_pincode" name="branch_pincode" placeholder="" class="form-control input-md"
+                           type="text">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="account_number">SB/Current Account Number</label>
+
+                <div class="col-md-4">
+                    <input id="account_number" name="account_number" placeholder="" class="form-control input-md"
+                           type="text">
+
+                </div>
+            </div>
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="btn_proceed_from_bank"></label>
+
+                <div class="col-md-4">
+                    <button id="btn_proceed_from_bank" name="btn_proceed_from_bank" class="btn btn-success">Save
+                        Profile
+                    </button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+</div>
+
+</div>
+</div>
+
+{{>footer.html}}
+
+</div>
+<!-- /.container -->
+
+<!-- jQuery Version 1.11.0 -->
+<script src="js/libs/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/libs/bootstrap.min.js"></script>
+<script src="js/libs/bootstrap-multiselect.js"></script>
+
+<script src="js/libs/validate.min.js"></script>
+<script src="pages/vendor_profile/validation.js"></script>
+{{{bind_data}}} <!--will insert js/common.js and data binding logic-->
+<script src="pages/vendor_profile/vendor_profile.js"></script>
+</body>
+
+</html>

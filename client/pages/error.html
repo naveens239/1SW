@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Oops</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-social.css" type="text/css"/>
+    <link href="css/modern-business.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/1stopwed.css" rel="stylesheet">
+</head>
+<body>
+
+{{>header.html}}
+
+<div class="container">
+    <div class="col-lg-8 col-lg-offset-2 text-center">
+        <br/><br/>
+        <div class="clearfix"></div>
+        <div class="logo">
+            <h1>OOPS, Error 404 !</h1>
+        </div>
+        <br/>
+        <p class="text-muted">There is some error here, Please try later. </p>
+        <p>{{message}}</p>
+        <h2>{{error.status}}</h2>
+
+    </div>
+</div>
+
+</body>
+</html>
