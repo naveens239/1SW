@@ -181,51 +181,53 @@ function setProfileInSession(req) {
 
 //Note: Commented for testing purpose.
 function vendor_profile(req, res) {
-    if (!req.session.passport.user || !req.session.passport.user.oauth_id) {
+    var user = req.session.passport.user;
+    if (!user || !user.oauth_id) {
         console.log("Error finding oauth_id");
         res.redirect("/");
     }
-    var oauth_id = req.session.passport.user.oauth_id;
+    var oauth_id = user.oauth_id;
     console.log("vendor_profile for oauth_id:" + oauth_id);
 
-    if (req.session.passport.user.vendor_profile) {
-        var profile = req.session.passport.user.vendor_profile;
+    if (user.vendor_profile) {
+        var profile = user.vendor_profile;
         autofill_phone_or_email(oauth_id, profile);
         viewUtil.renderPageModule('vendor_profile', res, _.extend(core.bind_data(profile), {'vendor_services': config.vendor_services}));
     } else {
         req.db.getVendorAccount(oauth_id, function (e, docs) {
             console.log("account -> " + JSON.stringify(docs));
             if (docs && docs.vendor_profile) {
-                req.session.passport.user.vendor_profile = docs.vendor_profile;
+                user.vendor_profile = docs.vendor_profile;
             }
-            var profile = req.session.passport.user.vendor_profile ? req.session.passport.user.vendor_profile : {};
-            autofill_phone_or_email(oauth_id, profile);
+            var profile = user.vendor_profile ? user.vendor_profile : {};
+            console.log('user.is_local_login:'+user.is_local_login);
+            if (user.is_local_login) {
+                autofill_phone_or_email(oauth_id, profile);
+            }
             viewUtil.renderPageModule('vendor_profile', res, _.extend(core.bind_data(profile), {'vendor_services': config.vendor_services}));
         });
     }
 }
 
 function autofill_phone_or_email(oauth_id, profile) {
-    console.log('profile.is_local_login:'+profile.is_local_login);
-    if (profile.is_local_login) {
-        var validator = require(__client_path + '/js/libs/validate.min.js');
-        var commonModule = require(__client_path + '/js/common.js');
-        var oauth_id_is_email = validator.validate({email: oauth_id}, {email: commonModule.constraints.email});
-        var oauth_id_is_mobile = validator.validate({mobile: oauth_id}, {mobile: commonModule.constraints.mobile});
 
-        if (!profile.email && oauth_id_is_email) {
-            profile.email = oauth_id;
-        }
-        else if (!profile.mobile && oauth_id_is_mobile) {
-            profile.mobile = oauth_id;
-        }
+    var validator = require(__client_path + '/js/libs/validate.min.js');
+    var commonModule = require(__client_path + '/js/common.js');
+    var email_errors = validator.validate({email: oauth_id}, {email: commonModule.constraints.email});
+    var mobile_errors = validator.validate({mobile: oauth_id}, {mobile: commonModule.constraints.mobile});
+    if (!profile.email && !email_errors) {
+        profile.email = oauth_id;
     }
+    else if (!profile.mobile && !mobile_errors) {
+        profile.mobile = oauth_id;
+    }
+
 }
 
 //Test code to skip mandatory login check
 /*function vendor_profile(req, res) {
-    viewUtil.renderPageModule('vendor_profile', res, {});
-}*/
+ viewUtil.renderPageModule('vendor_profile', res, {});
+ }*/
 
 function save_in_session(req, res) {
     setProfileInSession(req);
