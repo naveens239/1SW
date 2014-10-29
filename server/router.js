@@ -6,7 +6,6 @@
 var express = require('express'),
     root_router = express.Router(),
     api_router = express.Router(),
-    //vendor_router = express.Router(),
     core = require('./core'),
     fs = require('fs');
 
@@ -33,7 +32,6 @@ function post_exception(req, res) {
 
 setRoutesFromModule(__dirname + '/oauth', root_router, null);//load oauth routes
 setRoutesFromSubdirs(__dirname + '/pages/', root_router, api_router);//load page specific routes
-//setRoutesFromSubdirs(__dirname + '/pages/vendor/', vendor_router, api_router);//load vendor specific routes
 
 function setRoutesFromSubdirs(path, page_router, api_router) {
     var dirs = core.getDirectoriesSync(path);
@@ -65,6 +63,5 @@ function setRoutesFromModule(modulepath, page_router, api_router){
 
 module.exports = {
     root_router: root_router,
-    api_router: api_router/*,
-    vendor_router: vendor_router*/
+    api_router: api_router
 }

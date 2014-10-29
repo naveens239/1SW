@@ -136,7 +136,6 @@ function routeConfig() {
     var router = require('./router');
     app.use('/', router.root_router);
     app.use('/api', router.api_router);
-    //app.use('/vendor', router.vendor_router)
 }
 
 function errorConfig() {

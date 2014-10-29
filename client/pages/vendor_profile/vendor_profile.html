@@ -25,6 +25,7 @@
     <script src="js/libs/respond.min.js"></script>
     <![endif]-->
 
+    {{>gallery_css.html}}
 </head>
 
 <body>
@@ -75,6 +76,9 @@
 
 <script src="js/libs/validate.min.js"></script>
 <script src="pages/vendor_profile/validation.js"></script>
+
+{{>gallery_js.html}}
+
 {{{bind_data}}} <!--will insert js/common.js and data binding logic-->
 <script src="pages/vendor_profile/vendor_profile.js"></script>
 </body>
