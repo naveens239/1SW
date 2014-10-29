@@ -3,13 +3,6 @@
  */
 'use strict';
 
-console.log(
-        '                         *  *  *  *  *  *  *  *  *  *                         \n' +
-        '                       *                              *                       \n' +
-        ' * * * * * * * * * * *     1 S t o p W e d . c o m      * * * * * * * * * * * \n' +
-        '                       *                              *                       \n' +
-        '                         *  *  *  *  *  *  *  *  *  *                           ');
-
 var config = require('./config'),
     core = require('./core'),
     express = require('express'),
