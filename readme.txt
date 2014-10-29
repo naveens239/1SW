@@ -20,8 +20,6 @@ watchify client/pages/listresults/listresults.js -v -d -o client/js/list_bundle.
 
 —————————
 
-can edit html using the deploy code structure if html has the following:
+html developers can edit html to fetch images/js/css statically by adding the following:
 <base href="file:///Users/home/nodejsprojects/1stopwed/client/">
-
-before deploy it should be changed to
-<base href="/client">
+please remove it after html development.
