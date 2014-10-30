@@ -3,13 +3,13 @@
  */
 'use strict';
 
-var config = require('./config'),
-    core = require('./core'),
+var config  = require('./config'),
+    core    = require('./core'),
     express = require('express'),
-    path = require('path'),
-    hbs = require('hbs'),
-    fs = require('fs'),
-    _ = require('underscore');
+    path    = require('path'),
+    hbs     = require('hbs'),
+    fs      = require('fs'),
+    _       = require('underscore');
 
 var root_path = path.join(__dirname, '..');
 global.__server_path = path.join(root_path, 'server');
@@ -93,10 +93,10 @@ function databaseConfig() {
     });
 }
 
-function fetchStaticData(){
+function fetchStaticData() {
     //fetch vendor services during start. will be used in vendor profile page
-    config.db.getVendorServices(function(error, vendor_services) {
-        if(error){
+    config.db.getVendorServices(function (error, vendor_services) {
+        if (error) {
             throw error;
         }
         //console.log('vendor_services:' + JSON.stringify(vendor_services));
@@ -164,19 +164,33 @@ function loggerConfig() {
     //app.use(logger('dev'));
 }
 
-function registerPartials(scanPath) {
-    var file, isJS, isCSS, template, tagStart, tagEnd,
-        files = core.getFilesSync(scanPath);
-    console.log('....... Scanning partials: ' + files);
-    for (var i = 0; i < files.length; i++) {
-        file = files[i];
-        isJS = (file.indexOf('.js') >= 0);
-        isCSS = (file.indexOf('.css') >= 0);
-        tagStart = isJS ? '<script>' : isCSS ? '<style>' : "";
-        tagEnd = isJS ? '</script>' : isCSS ? '</style>' : "";
-        template = tagStart + fs.readFileSync(path.join(scanPath, file), 'utf8') + tagEnd;
-        hbs.registerPartial(file, template);
+function registerPartialFile(scanPath, file) {
+    var template, tagStart = "", tagEnd = "",
+        ext = path.extname(file);
+
+    if (ext === '.js') {
+        tagStart = '<script>';
+        tagEnd = '</script>';
+    } else if (ext === '.css') {
+        tagStart = '<style>';
+        tagEnd = '</style>';
     }
+    template = tagStart + fs.readFileSync(path.join(scanPath, file), 'utf8') + tagEnd;
+    hbs.registerPartial(file, template);
+}
+
+function registerPartials(scanPath) {
+    var started = Date.now();
+    require('filewalker')(scanPath)
+        .on('file', function (p, s) {
+            //console.log('file: %s', p);
+            registerPartialFile(scanPath, p);
+        }).on('done', function() {
+            var duration = Date.now()-started;
+            console.log('Scanned partials in %d ms', duration);
+            console.log('%d dirs, %d files, %d bytes', this.dirs, this.files, this.bytes);
+        })
+        .walk();
 }
 
 function startServer() {

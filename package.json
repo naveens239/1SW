@@ -13,6 +13,7 @@
     "express": "^4.0.0",
     "express-flash": "0.0.2",
     "express-session": "^1.8.2",
+    "filewalker": "^0.1.2",
     "gm": "^1.17.0",
     "hbs": "^2.7.0",
     "i18n-2": "^0.4.6",
