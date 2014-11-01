@@ -162,6 +162,7 @@ passport.serializeUser(function (user, done) {
     done(null, user);
 });
 
+//TODO: instead of saving all vendor data in session, need to fetch the key and get remaining using deserializeUser
 passport.deserializeUser(function (user, done) {
     console.log('deserializeUser: ' + user);
     done(null, user);

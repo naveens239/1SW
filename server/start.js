@@ -187,8 +187,7 @@ function registerPartials(scanPath) {
             registerPartialFile(scanPath, p);
         }).on('done', function() {
             var duration = Date.now()-started;
-            console.log('Scanned partials in %d ms', duration);
-            console.log('%d dirs, %d files, %d bytes', this.dirs, this.files, this.bytes);
+            console.log('Registered partials from %d dirs, %d files in %d ms', this.dirs, this.files, duration);
         })
         .walk();
 }

@@ -43,15 +43,6 @@ module.exports = {
         var user = collection.findOne({oauth_id:oauth_id}, callback);
         return user;
     },
-    //saveProfile moved to server/pages/vendor/gallery/mongo_extension.js
-    /*saveProfile: function (userid, profile) {
-        console.log('db::saveProfile');
-        var collection = dbInstance.get('account');
-        collection.update(
-            {userid: userid}, // query
-            {$set: {profile: profile}} // replacement, replaces only the field "profile"
-        );
-    },*/
     list: function(table, callback){
         var collection = this.getDBinstance().get(table);
         collection.find({}, function(e, docs){

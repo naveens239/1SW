@@ -29,7 +29,7 @@ function gallery(req, res) {
     var folder_name = req.session.passport.user.oauth_id;
     var relative_folder_path = '/uploads/' + folder_name + '/';
     var folder_path = __client_path + relative_folder_path;
-    var MAX_FILES = 9;
+    //var MAX_FILES = 9;
     fs.readdir(folder_path, function (err, files) {
         if (err) {
             console.log("error reading user's upload folder:" + folder_path);
@@ -37,7 +37,7 @@ function gallery(req, res) {
         }
         var filenames = {}, i, filename, filenameWithoutExtension;
         //TODO: limit the number of files in gallery
-        //files = files.splice(MAX_FILES);
+        //files = files.splice(MAX_FILES);?
         for (i in files) {
             filename = files[i];
             // skip small size images to avoid duplication
@@ -210,18 +210,12 @@ function vendor_profile(req, res) {
 }
 
 function autofill_phone_or_email(oauth_id, profile) {
-
-    var validator = require(__client_path + '/js/libs/validate.min.js');
-    var commonModule = require(__client_path + '/js/common.js');
-    var email_errors = validator.validate({email: oauth_id}, {email: commonModule.constraints.email});
-    var mobile_errors = validator.validate({mobile: oauth_id}, {mobile: commonModule.constraints.mobile});
-    if (!profile.email && !email_errors) {
-        profile.email = oauth_id;
+    if (core.isEmail({email: oauth_id})) {
+        if(!profile.email) profile.email = oauth_id;
     }
-    else if (!profile.mobile && !mobile_errors) {
-        profile.mobile = oauth_id;
+    else if (core.isMobile({mobile: oauth_id})) {
+        if(!profile.mobile) profile.mobile = oauth_id;
     }
-
 }
 
 //Test code to skip mandatory login check

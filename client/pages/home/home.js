@@ -6,12 +6,12 @@ $(function () {
 
 function setEvents() {
     //Set html element event handlers
-    //$('#btnLogin').leanModal({top: 200, overlay: 0.6, closeButton: ".modal_close" });//For enabling login popup
+    $('#fbLink').click(facebookLogin);
+    $('#googleLink').click(googleLogin);
     $('#btnLocalLogin').click(function(){ return validate_login('#formLogin')});
     $('#btnLocalSignUp').click(validate_signup);
     $('#btnLogout').click(logout);
-    $('#fbLink').click(facebookLogin);
-    $('#googleLink').click(googleLogin);
+    $('#btnForgotPassword').click(validate_forgot_password);
 }
 
 function init() {
@@ -64,6 +64,18 @@ function validate_signup(){
         return false;
     }
     return validate_login(formId);
+}
+
+function validate_forgot_password(){
+    /*var username = $('#formForgotPassword input[name=username]').val();
+    var emailConstraint = { username: commonModule.constraints.email };
+
+    var uidNotEmail = validate({username: username}, emailConstraint, {flatten: true});
+    if (uidNotEmail) {
+        alert('Please enter your registered email id.');
+        return false;
+    }*/
+    return true;
 }
 
 function facebookLogin() {
