@@ -68,9 +68,7 @@ function upload(req, res) {
 
     // make sure folder exists
     if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, function(err) {
-            console.log('folder creation error: ' + err);
-        });
+        fs.mkdirSync(dir);
     }
 
     var fileNameObj = {};
