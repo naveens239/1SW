@@ -3,13 +3,14 @@
  */
 'use strict';
 
-var config  = require('./config'),
-    core    = require('./core'),
-    express = require('express'),
-    path    = require('path'),
-    hbs     = require('hbs'),
-    fs      = require('fs'),
-    _       = require('underscore');
+var filewalker = require('filewalker'),
+    config    = require('./config'),
+    core      = require('./core'),
+    express   = require('express'),
+    path      = require('path'),
+    hbs       = require('hbs'),
+    fs        = require('fs'),
+    _         = require('underscore');
 
 var root_path = path.join(__dirname, '..');
 global.__server_path = path.join(root_path, 'server');
@@ -91,16 +92,28 @@ function databaseConfig() {
         //console.log('req.method:%s, req.url:%s', req.method, req.url);//logs all requests including js, css GET request
         next();
     });
+    //--------------
+    var mongoose = require('mongoose');
+    mongoose.connect('mongodb://' + config.dbconfig.dburl);
+    mongoose.connection.on('error', console.error.bind(console, 'connection error:'));
 }
 
 function fetchStaticData() {
     //fetch vendor services during start. will be used in vendor profile page
-    config.db.getVendorServices(function (error, vendor_services) {
-        if (error) {
-            throw error;
-        }
-        //console.log('vendor_services:' + JSON.stringify(vendor_services));
-        config.vendor_services = vendor_services;
+    /*config.db.getVendorServices(function (error, vendor_services) {
+     if (error) {
+     throw error;
+     }
+     //console.log('vendor_services:' + JSON.stringify(vendor_services));
+     config.vendor_services = vendor_services;
+     });*/
+    //-------------
+    var vendor_services_model_class = require(path.join(__server_path , 'models/vendor_services'));
+    var vendor_services_model = new vendor_services_model_class();
+
+    vendor_services_model.findAll(function (vendor_sevices) {
+        //console.log('vendor_sevices:'+ vendor_sevices);
+        config.vendor_services = _.values(vendor_sevices);//_.values coz handlebars need array to iterate, not object
     });
 }
 
@@ -181,12 +194,12 @@ function registerPartialFile(scanPath, file) {
 
 function registerPartials(scanPath) {
     var started = Date.now();
-    require('filewalker')(scanPath)
+    filewalker(scanPath)
         .on('file', function (p, s) {
             //console.log('file: %s', p);
             registerPartialFile(scanPath, p);
-        }).on('done', function() {
-            var duration = Date.now()-started;
+        }).on('done', function () {
+            var duration = Date.now() - started;
             console.log('Registered partials from %d dirs, %d files in %d ms', this.dirs, this.files, duration);
         })
         .walk();
