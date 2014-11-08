@@ -286,3 +286,9 @@ button#btnSettings:hover + #btnSave {
     display: inline;
     height:70px;
 }
+
+.img-size{
+    height: 150px;
+    width: 100%;
+    display: block;
+}
