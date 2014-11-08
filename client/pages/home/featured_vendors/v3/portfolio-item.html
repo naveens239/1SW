@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Modern Business - Start Bootstrap Template</title>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-social.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/css/modern-business.css" rel="stylesheet">
+    <link href="/css/1stopwed.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="/js/libs/html5shiv.js"></script>
+        <script src="/js/libs/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <div id="logo">
+                <a  href="/"> <img class="img-responsive img-beta" src="/images/beta.png" alt=""/>
+                    <img src="/images/logo.png" alt="LOGO" class="img_logo"/></a>
+            </div>
+
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/contact">Contact</a>
+                </li>
+                <li id="menuLogin" class="dropdown">
+                    <a id="navLogin" data-toggle="dropdown" href="#" class="dropdown-toggle">Login</a>
+
+                    <div style="padding:17px;" class="dropdown-menu">
+                        <form class="form" id="formLogin">
+                            <label>Login</label>
+                            <input type="hidden" value="GkmjtfHB-bMXO8TM-9a_ZoW4hGW2m22QSkaA" id="token" name="_csrf">
+                            <input type="text" required="" title="Enter your username" data-valid-min="6"
+                                   pattern="^[a-z,A-Z,0-9,_]{6,15}$" placeholder="Username" id="username"
+                                   name="username">
+                            <input type="password" required="" title="Enter your password" placeholder="Password"
+                                   id="password" name="password"><br>
+                            <button class="btn" id="btnLogin" type="button">Login</button>
+                        </form>
+                        <form><a data-target="#formRegister" data-toggle="collapse" id="btnNewUser"
+                                 title="Fast and free sign up!" href="#">New User? Sign-up..</a></form>
+                        <form class="form collapse" id="formRegister">
+                            <input type="hidden" value="GkmjtfHB-bMXO8TM-9a_ZoW4hGW2m22QSkaA" id="token" name="_csrf">
+                            <input type="email" required="" placeholder="Email" id="inputEmail" name="email">
+                            <input type="text" required="" title="Choose a username" data-valid-min="6"
+                                   pattern="^[a-z,A-Z,0-9,_]{6,15}$" placeholder="Username" id="inputUsername"
+                                   name="username"><br>
+                            <input type="password" required="" placeholder="Password" id="inputpassword"
+                                   name="password">
+                            <input type="password" required="" placeholder="Password (again)" id="inputVerify"
+                                   name="verify"><br>
+                            <button class="btn" id="btnRegister" type="button">Sign Up</button>
+                        </form>
+                        <a href="#forgotPasswordModal" role="button" data-toggle="modal">Forgot username or
+                            password?</a>
+                        <a href="#contactModal" role="button" data-toggle="modal">
+                            <small>Need help? Contact us</small>
+                        </a>
+                    </div>
+                </li>
+                <!--  search bar code -->
+                <!-- <li>
+                    <form style="margin-top:4px;margin-bottom:5px;" action="/search" method="GET" class="input-append">
+                        <input type="text" maxlength="40" class="span2" name="kw" id="kw"
+                               title="Find your favorite vendor">
+                        <button class="btn" type="submit"><i title="Search" class="glyphicon glyphicon-search"></i></button>
+                    </form>
+                    &nbsp;&nbsp;
+                </li> -->
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Wedding Clothing
+
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Portfolio Item Row -->
+        <div class="row">
+
+            <div class="col-md-8">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img class="img-responsive img-size" src="/pages/home/featured_vendors/v3/1.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive img-size" src="/pages/home/featured_vendors/v3/2.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive img-size" src="/pages/home/featured_vendors/v3/3.png" alt="">
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h3>Details</h3>
+                <ul>
+                    <li>Phone: +91 99955 82008</li>
+                    <b>Location:</b><br/>
+                    Kochi, India
+                </ul>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <!-- Related Projects Row -->
+   <!--     <div class="row">
+
+            <div class="col-lg-12">
+                <h3 class="page-header">Related Projects</h3>
+            </div>
+
+            <div class="col-sm-3 col-xs-6">
+                <a href="#">
+                    <img class="img-responsive img-hover img-related" src="http://placehold.it/500x300" alt="">
+                </a>
+            </div>
+
+            <div class="col-sm-3 col-xs-6">
+                <a href="#">
+                    <img class="img-responsive img-hover img-related" src="http://placehold.it/500x300" alt="">
+                </a>
+            </div>
+
+            <div class="col-sm-3 col-xs-6">
+                <a href="#">
+                    <img class="img-responsive img-hover img-related" src="http://placehold.it/500x300" alt="">
+                </a>
+            </div>
+
+            <div class="col-sm-3 col-xs-6">
+                <a href="#">
+                    <img class="img-responsive img-hover img-related" src="http://placehold.it/500x300" alt="">
+                </a>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; 1StopWed 2014</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="/js/libs/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/libs/bootstrap.min.js"></script>
+
+</body>
+
+</html>
