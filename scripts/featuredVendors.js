@@ -20,3 +20,4 @@ collection.find({featured: {$gt: 0}}, {
         console.log('----------------------------------------------------');
         process.exit(0);
     });
+//
