@@ -6,8 +6,9 @@ var monk       = require('monk'),
 
 collection.find({featured:{$gt:0}}, { sort : { featured : 1 } }, function (err, accounts) {
     console.log('----------------------------------------------------');
+    var vendor_name;
     _.each(accounts, function (account, key) {
-        var vendor_name = account.vendor_profile ? account.vendor_profile.vendor_name : "";
+        vendor_name = account.vendor_profile ? account.vendor_profile.vendor_name : "";
         console.log(account.oauth_id + " : " + vendor_name);
     });
     console.log('----------------------------------------------------');
