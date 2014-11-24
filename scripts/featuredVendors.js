@@ -5,15 +5,13 @@ var monk       = require('monk'),
     _          = require('underscore');
 
 collection.find({featured:{$gt:0}}, { sort : { featured : 1 } }, function (err, accounts) {
-    var numRecords = 0;
     console.log('----------------------------------------------------');
     _.each(accounts, function (account, key) {
         var vendor_name = account.vendor_profile ? account.vendor_profile.vendor_name : "";
-        numRecords++;
         console.log(account.oauth_id + " : " + vendor_name);
     });
     console.log('----------------------------------------------------');
-    console.log('number of records:' + numRecords);
+    console.log('number of records:' + accounts.length);
     console.log('----------------------------------------------------');
     process.exit(0);
 });
