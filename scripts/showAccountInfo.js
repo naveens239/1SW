@@ -1,10 +1,7 @@
-var monk       = require('monk'),
-    dbconfig   = require('../server/config').dbconfig,
-    dbInstance = monk(dbconfig.dburl),
-    collection = dbInstance.get('vendor_account'),
-    _          = require('underscore');
+var common = require('./common'),
+    _      = require('underscore');
 
-collection.find({}, { sort : { created : 1 } }, function (err, accounts) {
+common.find({}, {sort: {created: 1}}, function (err, accounts) {
     var numRecords = 0;
     console.log('----------------------------------------------------');
     _.each(accounts, function (account, key) {

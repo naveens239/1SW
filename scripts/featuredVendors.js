@@ -1,10 +1,7 @@
-var monk       = require('monk'),
-    dbconfig   = require('../server/config').dbconfig,
-    dbInstance = monk(dbconfig.dburl),
-    collection = dbInstance.get('vendor_account'),
-    _          = require('underscore');
+var common = require('./common'),
+    _      = require('underscore');
 
-collection.find({featured: {$gt: 0}}, {
+common.find({featured: {$gt: 0}}, {
         sort  : {featured: 1},
         fields: {_id: false, oauth_id: true, "vendor_profile.vendor_name": true}
     },
