@@ -1,0 +1,17 @@
+{{#if featured_vendors}}
+<div class="row">
+    <div class="col-lg-12">
+        <h2 class="page-header">Featured Vendors</h2>
+    </div>
+    {{#each featured_vendors}}
+    <div class="col-md-4 col-sm-6">
+        <a href="/featured_vendor/{{oauth_id}}">
+            <img   class="img-responsive img-portfolio img-hover img-size" src="uploads/{{oauth_id}}/banner.png" alt="">
+        </a>
+        <div class="photogra-ti-img">
+            <span>&nbsp;{{vendor_profile.vendor_name}}</span>
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{/if}}

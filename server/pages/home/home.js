@@ -19,10 +19,14 @@ function home(req, res) {
         WelcomeMsg = _i.__("Welcome %s", name);
     }
     console.log('isLoggedIn:'+isLoggedIn);
-    viewUtil.renderPage('home/home', res, {
-        lang: _i.getLocale(),
-        title: _i.__("Wedding Planner"),
-        isLoggedIn: isLoggedIn,
-        WelcomeMsg: WelcomeMsg
+
+    req.db.getFeaturedVendors(function(err, featured_vendors) {
+        viewUtil.renderPage('home/home', res, {
+            lang: _i.getLocale(),
+            title: _i.__("Wedding Planner"),
+            isLoggedIn: isLoggedIn,
+            WelcomeMsg: WelcomeMsg,
+            featured_vendors: featured_vendors
+        });
     });
 }
