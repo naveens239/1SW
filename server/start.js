@@ -96,6 +96,9 @@ function databaseConfig() {
     var mongoose = require('mongoose');
     mongoose.connect('mongodb://' + config.dbconfig.dburl);
     mongoose.connection.on('error', console.error.bind(console, 'connection error:'));
+    mongoose.connection.once('open', function callback() {
+        console.log('Mongoose connected to DB');
+    });
 }
 
 function fetchStaticData() {
