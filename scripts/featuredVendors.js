@@ -1,6 +1,8 @@
 var common = require('./common'),
     _      = require('underscore');
 
+common.connect_monk('vendor_account');
+
 common.find({featured: {$gt: 0}}, {
         sort  : {featured: 1},
         fields: {_id: false, oauth_id: true, "vendor_profile.vendor_name": true}

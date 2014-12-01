@@ -1,6 +1,7 @@
 var common = require('./common'),
     _      = require('underscore');
 
+common.connect_monk('vendor_account');
 common.find({}, {sort: {created: 1}}, function (err, accounts) {
     var numRecords = 0;
     console.log('----------------------------------------------------');
