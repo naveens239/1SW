@@ -38,17 +38,9 @@
     <script src="js/libs/jquery.min.js"></script>
     <!-- End WOWSlider.com HEAD section -->
 
-    <!-- Start 3D viewer-->
-    <script type="text/javascript" src="js/libs/jsc3d.js"></script>
-    <script type="text/javascript" src="js/libs/jsc3d.touch.js"></script>
-    <!-- End 3D viewer-->
-
-
 </head>
 
 <body>
-
-
 
 {{>header.html}}
 
@@ -57,20 +49,7 @@
 <!-- Page Content -->
 <div class="container">
     {{>featured_vendors.html}}
-
-   <canvas id="cv" width=400 height=280> It seems you are using an outdated browser that does not support canvas :-(</canvas>
-    <script type="text/javascript">
-        var viewer = new JSC3D.Viewer(document.getElementById('cv'));
-        viewer.setParameter('SceneUrl',         '/uploads/helicopter.obj');
-        viewer.setParameter('ModelColor',       '#CAA618');
-        viewer.setParameter('BackgroundColor1', '#E5D7BA');
-        viewer.setParameter('BackgroundColor2', '#383840');
-        viewer.setParameter('RenderMode',       'flat');
-        viewer.init();
-        viewer.update();
-    </script>
-
-    <br/>
+<br/>
     <!-- Marketing Icons Section -->
     <div class="row">
         <div class="col-lg-12">
