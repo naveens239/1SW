@@ -1,5 +1,4 @@
 node_modules
 database
 .idea/*
-client/uploads/*
 .DS_Store
